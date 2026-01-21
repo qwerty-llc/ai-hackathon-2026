@@ -12,11 +12,11 @@ supabase = create_client(url, key)
 st.set_page_config(page_title="CyberGuard SOC", layout="wide")
 
 # Navigation Bar
-col_nav1, col_nav2, col_nav3 = st.columns([1, 1, 4])
-with col_nav1:
-    st.page_link("pages/1_Alerts.py", label="Alerts", icon="🚨")
-with col_nav2:
-    st.page_link("pages/2_Settings.py", label="Settings", icon="⚙️")
+# col_nav1, col_nav2, col_nav3 = st.columns([1, 1, 4])
+# with col_nav1:
+#     st.page_link("pages/1_Alerts.py", label="Alerts", icon="🚨")
+# with col_nav2:
+#     st.page_link("pages/2_Settings.py", label="Settings", icon="⚙️")
 
 st.divider()
 
@@ -59,3 +59,5 @@ with st.sidebar:
         st.rerun()
     st.write("Monitoring: Telegram (Active)")
     st.write("AI Model: Gemini 1.5 Flash")
+    st.page_link("pages/1_Alerts.py", label="Alerts", icon="🚨")
+    st.page_link("pages/2_Settings.py", label="Settings", icon="⚙️")
