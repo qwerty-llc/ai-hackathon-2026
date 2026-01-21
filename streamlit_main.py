@@ -11,6 +11,15 @@ supabase = create_client(url, key)
 
 st.set_page_config(page_title="CyberGuard SOC", layout="wide")
 
+# Navigation Bar
+col_nav1, col_nav2, col_nav3 = st.columns([1, 1, 4])
+with col_nav1:
+    st.page_link("pages/1_Alerts.py", label="Alerts", icon="🚨")
+with col_nav2:
+    st.page_link("pages/2_Settings.py", label="Settings", icon="⚙️")
+
+st.divider()
+
 # 2. Header & Branding
 st.title("🛡️ CyberGuard: Uzbekistan OSINT Command Center")
 st.markdown("Real-time AI Monitoring for Public Safety")
